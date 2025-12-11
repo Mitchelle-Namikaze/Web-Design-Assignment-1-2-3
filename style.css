@@ -1,0 +1,352 @@
+/* style.css */
+:root {
+    --primary-green: #1EB53A; /* Sierra Leone Green */
+    --primary-blue: #0072C6;  /* Sierra Leone Blue */
+    --white: #ffffff;
+    --light-gray: #f4f4f4;
+    --dark-text: #333;
+    --border-color: #ddd;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Navigation --- */
+header {
+    background-color: var(--white);
+    border-bottom: 3px solid var(--primary-green);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    color: var(--primary-green);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-blue);
+}
+
+.btn-nav {
+    background-color: var(--primary-blue);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-green);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #f9f9f9;
+    padding: 2rem 0;
+    margin-top: auto;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Components & Utils --- */
+.img-placeholder {
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-blue);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* --- Home Page --- */
+.hero {
+    position: relative;
+    height: 400px;
+    background-color: 4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-overlay {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    border-top: 4px solid var(--primary-blue);
+}
+
+.news-card, .player-card, .match-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    transition: transform 0.2s;
+}
+
+.news-card:hover, .player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* --- About Page --- */
+.timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.mission-vision {
+    background-color: var(--light-gray);
+    padding: 3rem 0;
+    margin: 2rem 0;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.team-card {
+    display: flex;
+    gap: 1rem;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    align-items: center;
+}
+
+.team-img {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+/* --- Players Page --- */
+.filter-bar {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-bar select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+.player-img-container {
+    height: 250px;
+    background: #eee;
+    overflow: hidden;
+}
+
+.player-tag {
+    background: var(--primary-blue);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* --- Matches Page --- */
+.matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.match-card {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 3px solid var(--primary-green);
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.results-table th {
+    background-color: rgb(1, 95, 43);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.results-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.status-badge {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.newsletter {
+    background-color: rgb(3, 94, 9);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 3rem;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* --- Contact Page --- */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    border: 1px solid #ccc;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav { flex-direction: column; gap: 1rem; }
+    .timeline-grid, .mv-grid, .contact-container { grid-template-columns: 1fr; }
+    .hero { height: auto; padding: 3rem 1rem; }
+    .newsletter input { width: 100%; margin-bottom: 10px; }
+}

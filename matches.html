@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches & Fixtures - SLFA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="Logo" style="border-radius: 50%;" width="60" height="60">
+                    Football Agency <span>Sierra Leone</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="matches.html" class="active">Matches</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="btn-nav">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div style="background-color: #f8f9fa; padding: 3rem 0;">
+        <div class="container" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+            <div style="flex: 1;">
+                <h1 style= "font-size: 3rem; margin-bottom: 1rem; color: rgb(8, 78, 230);">Matches & Fixtures</h1>
+                <p>Stay up to date with all the action. View comprehensive schedules for upcoming matches and detailed results.</p>
+            </div>
+            <div style="flex: 1;">
+            <img src="stadium.jpg" alt="Stadium" style="width: 100%; border-radius: 8px;">
+        </div>
+        </div>
+    </div>
+
+    <main class="container">
+        
+        <h2 style="text-align: center; margin-bottom: 1rem;">Upcoming Matches</h2>
+        <div class="matches-grid">
+            <div class="match-card">
+                <h4>Freetown FC vs Blackpool</h4>
+                <p style="font-size: 0.9rem; color: #666;">National Stadium</p>
+                <hr style="margin: 10px 0; border: 0; border-top: 1px solid #eee;">
+                <p><strong>Date:</strong> 2025-04-15</p>
+                <p><strong>Time:</strong> 17:00</p>
+                <span class="status-badge" style="margin-top: 10px; display: inline-block;">Confirmed</span>
+            </div>
+
+            <div class="match-card">
+                <h4>Kono United vs Wusum Stars</h4>
+                <p style="font-size: 0.9rem; color: #666;">Koidu Field</p>
+                <hr style="margin: 10px 0; border: 0; border-top: 1px solid #eee;">
+                <p><strong>Date:</strong> 2025-04-18</p>
+                <p><strong>Time:</strong> 16:00</p>
+                <span class="status-badge">Confirmed</span>
+            </div>
+
+            <div class="match-card">
+                <h4>Bo Rangers vs East End Lions</h4>
+                <p style="font-size: 0.9rem; color: #666;">Bo Stadium</p>
+                <hr style="margin: 10px 0; border: 0; border-top: 1px solid #eee;">
+                <p><strong>Date:</strong> 2025-04-22</p>
+                <p><strong>Time:</strong> 18:00</p>
+                <span class="status-badge">Scheduled</span>
+            </div>
+        </div>
+
+        <hr style="margin: 3rem 0; border-color: #eee;">
+
+        <h2 style="text-align: center;">Recent Results</h2>
+        <div style="overflow-x: auto;">
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Opponent</th>
+                        <th>Venue</th>
+                        <th>Score</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-03-28</td>
+                        <td>Diamond Stars</td>
+                        <td>National Stadium</td>
+                        <td>2 - 1</td>
+                        <td><span class="status-badge">Won</span></td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-21</td>
+                        <td>Kamboi Eagles</td>
+                        <td>Kenema Field</td>
+                        <td>0 - 0</td>
+                        <td><span class="status-badge">Draw</span></td>
+                    </tr>
+                    <tr>
+                        <td>2025-03-14</td>
+                        <td>Wusum Stars</td>
+                        <td>Wusum Field</td>
+                        <td>1 - 0</td>
+                        <td><span class="status-badge">Lost</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <h3>Match Calendar</h3>
+            <div style="border: 1px solid #ccc; padding: 2rem; display: inline-block; margin-top: 1rem; border-radius: 8px;">
+                <p>Select a Date to view fixtures</p>
+                <input type="date" style="padding: 10px; margin-top: 10px;">
+            </div>
+        </div>
+
+    </main>
+
+    <section class="newsletter">
+        <h2>Don't Miss a Single Match!</h2>
+        <p style="margin-bottom: 2rem; color: #ccc;">Sign up for our newsletter to get the latest updates on matches and player news.</p>
+        <form>
+            <input type="email" placeholder="Enter your email address">
+            <button type="button" class="btn" style="background-color: rgb(4, 99, 150); color: rgb(255, 255, 255);">Subscribe Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container footer-bottom">
+            &copy; 2025 Football Agency Sierra Leone.
+        </div>
+    </footer>
+</body>
+</html>
