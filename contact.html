@@ -22,6 +22,8 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html" class="active btn-nav">Contact</a></li>
                 </ul>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    &#9776; </button>
             </nav>
         </div>
     </header>
@@ -51,20 +53,20 @@
 
             <div style="background: #f9f9f9; padding: 2rem; border-radius: 8px;">
                 <h3 style="text-align: center; margin-bottom: 1rem;">Send Us a Message</h3>
-                <form>
+                <form id="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name">
+                        <input type="text" placeholder="Your Name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email">
+                        <input type="email" placeholder="Your Email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <textarea rows="5" placeholder="Your Message"></textarea>
+                        <textarea rows="5" placeholder="Your Message" name="message" required></textarea>
                     </div>
                     <button type="submit" class="btn" style="width: 100%; background-color: #333;">Submit Inquiry</button>
                     <p style="font-size: 0.7rem; color: #888; margin-top: 10px; text-align: center;">By submitting this form, you agree to be contacted by the agency.</p>
                 </form>
-            </div>
+                </div>
         </div>
 
         <div style="margin-top: 4rem; text-align: center;">
@@ -83,5 +85,6 @@
             &copy; 2025 Football Agency Sierra Leone.
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
